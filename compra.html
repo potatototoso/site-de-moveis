@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Finalizar Compra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <h1>Finalizar Compra</h1>
+</header>
+
+<section style="text-align:center; padding:40px;">
+  <h2 id="nome"></h2>
+  <p id="preco"></p>
+
+  <button onclick="finalizar()">Confirmar Compra</button>
+</section>
+
+<script>
+document.getElementById("nome").innerText =
+  localStorage.getItem("produto");
+
+document.getElementById("preco").innerText =
+  "R$ " + localStorage.getItem("preco");
+
+function finalizar(){
+  alert("Compra realizada com sucesso!");
+}
+</script>
+
+</body>
+</html>
